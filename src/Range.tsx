@@ -181,7 +181,7 @@ class Range extends React.Component<IProps> {
               thumbMargins.left +
               trackPadding.left) *
             -1;
-          thumbOffsets.y = -trackPadding.left;
+          thumbOffsets.y = (thumbMargins.bottom + trackPadding.bottom) * -1;
           thumbOffsets.y +=
             trackRect.height -
             trackRect.height * relativeValue(values[index], min, max) -
@@ -193,7 +193,7 @@ class Range extends React.Component<IProps> {
               thumbMargins.left +
               trackPadding.left) *
             -1;
-          thumbOffsets.y = -trackPadding.left;
+          thumbOffsets.y = (thumbMargins.top + trackPadding.top) * -1;
           thumbOffsets.y +=
             trackRect.height * relativeValue(values[index], min, max) -
             thumbRect.height / 2;
